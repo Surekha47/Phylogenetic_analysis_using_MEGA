@@ -16,8 +16,8 @@ Open the aligned_sequences.meg file.
 Choose a tree-building method:
 Neighbor-Joining (NJ) (In case of large datasets)
 Maximum Likelihood (ML) (For moderate size datasets (100-1000))
-Maximum Parsimony (MP) 
-UPGMA 
+Maximum Parsimony (MP) (For small datasets)
+UPGMA (Closely related sequences)
 Select Bootstrap value (100)
 
 Click Compute to generate the tree.
