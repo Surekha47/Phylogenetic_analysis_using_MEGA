@@ -19,7 +19,7 @@ Sequence D: ATGGTGAAAGTG
 Sequence E: CCGGAAAACTTG
 Sequence F: TGGCCCTGTATC
 
-Step 1: Compute the distance matrix (In matrix we calculate the paiwise genetic distances between species).
+Step 1: Compute the distance matrix (In matrix we calculate the paiwise genetic distances or number of mismatches between two sequences).
    A   B   C   D   E   F
 A  0   9   2   4   9   11
 B  0   0   9   6   2   11
@@ -27,6 +27,21 @@ C  0   0   0   5   9   11
 D  0   0   0   0   6   10
 E  0   0   0   0   0   10
 F  0   0   0   0   0   0
+
+Step 2: Identify the closest pair (pair with smallest distance)
+In this example, A and C, B and E are the closest because number of mismatches are smallest for these.
+
+Step 3: Merge A and C, B and E into a new cluster and calculate distances between remaining taxa and the new clusters using the before formula.
+
+d(AC,X) = d(A,X)+d(C,X)/2
+
+
+      AC   B   D   E   F
+AC   0     9   4.5   9   11
+B     0     0   6   2   11
+D     0     0   0   6   10
+E     0     0   0   0   10
+F     0     0   0   0   0
 
 
 
