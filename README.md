@@ -19,10 +19,16 @@ Sequence D: ATGGTGAAAGTG
 Sequence E: CCGGAAAACTTG
 Sequence F: TGGCCCTGTATC
 
+Step 1: Compute the distance matrix (In matrix we calculate the paiwise genetic distances between species).
+   A   B   C   D   E   F
+A  0   9   2   4   9   11
+B  0   0   9   6   2   11
+C  0   0   0   5   9   11
+D  0   0   0   0   6   10
+E  0   0   0   0   0   10
+F  0   0   0   0   0   0
 
 
 
-
-   
 
 # Link to install MEGA (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe)
