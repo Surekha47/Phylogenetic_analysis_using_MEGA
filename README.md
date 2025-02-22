@@ -9,8 +9,16 @@ There are two tree construction methods.
 2) Character-based methods (Maximum Likelihood method, Maximum Parsimony method)
 
 # Neighbor-Joining Method:
-# UPGMA
+# UPGMA Method
 It assumes constant rate of evolution (molecular clock) means all species in the tree have evolved for the same duration from their common ancestor.
+For example, we have some sequences and we need to construct a phylogenetic tree using these sequences and UPGMA method.
+Sequence A: ATCGTGGTACTG
+Sequence B: CCGGAGAACTAG
+Sequence C: AACGTGCTACTG
+Sequence D: ATGGTGAAAGTG
+Sequence E: CCGGAAAACTTG
+Sequence F: TGGCCCTGTATC
+
 
 
 
