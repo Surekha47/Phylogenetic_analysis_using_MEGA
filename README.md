@@ -35,6 +35,60 @@ D  0   0   0   0   29.5
 #Step 2: Compute d'i,j for each terminal node using the below formula.
 d'ij = dij-r'i-r'j
 d'AB = dAB-r'A-r'B = 17-32.5-23.5 = -39
+Similarly compute d'ij for each node.
+d'   A   B   C   D
+A    0   -39 -35 -35
+B    0   0   -35 -35
+C    0   0   0   -39
+D    0   0   0    0
+
+#Select minimum d' (For e.g. minimum distance is -39 between A&B and C&D, we can select and join any of these two taxa).
+First we consider joining of taxa C and D to a node u.
+
+#Step 3: Calculate branch lengths.
+Vi = 0.5(dij)+0.5(r'i-r'j)
+Vj = 0.5(dji)+0.5(r'j-r'i)
+
+VCu = 0.5(dCD)+0.5(r'C-r'D) = 0.5(14)+0.5(23.5-29.5) = 4
+VDu = 0.5(dDC)+0.5(r'D-r'C) = 0.5(14)+0.5(29.5-23.5) = 10
+
+Length of branches Cu and Du are 4 and 10 respectively.
+
+#Round 2
+#Step 1:
+
+dij,k = (di,k+dj,k-di,j)/2   (ij = CD, k = A/B)
+dCD,A = (dCA+dDA-dcD)/2 = (21+27-14)/2 = 17
+dCD,B = (dCB+dDB-dcD)/2 = (12+18-14)/2 = 8
+
+r'A = (dAB+dACD)/(n-2) = (17+17)/(3-2) = 34
+Similary calculate r'B and r'CD.
+
+d   A   B   CD    r'i
+A   0   17  17    34
+B   0   0   8     25
+CD  0   0   0     25
+
+#Step 2: Compute d'i,j for new matrix using above formula
+
+d'   A   B   CD
+A    0  -42 -42
+B    0   0  -42
+CD   0   0   0
+
+#Select minimum d' (minimum distance is -42 so we can join any of three for e.g, A to B, A to CD, B to CD)
+We join A to B to a node.
+#Step 3: Calculate branch length using above formula.
+VAV = 0.5(dAB)+0.5(r'A-r'B) = 0.5(17)+0.5(34-25) = 13
+VBv = 0.5(dBA)+0.5(r'B-r'A) = 0.5(17)+0.5(25-34) = 4
+
+Length of branches Av and Bv are 13 and 4 respectively.
+
+#Round 3
+#Step 1: Update distance matrix and calculate distance between AB and CD.
+d   AB   CD
+AB  0     4
+CD  0     0
 
 
 # UPGMA Method
