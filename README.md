@@ -5,8 +5,8 @@ To identify the common ancestors and understand how species have evolved over ti
 #Phylogenetic trees: 
 A phylogenetic tree is constructed to represent evolutionary relationships.
 There are two tree construction methods.
-1) Distance-based methods (Neighbor-Joining method, Unweighted Pair Group Method with Arithmetic mean (UPGMA))
-2) Character-based methods (Maximum Likelihood method, Maximum Parsimony method)
+1) Distance-based methods (based on pairwise distances between sequences e.g. Neighbor-Joining method, Unweighted Pair Group Method with Arithmetic mean (UPGMA))
+2) Character-based methods (based on sequence character e.g. Maximum Likelihood method, Maximum Parsimony method)
 
 # Neighbor-Joining Method:
 Key points:
@@ -143,5 +143,24 @@ ACD  0   7.5  10.5
 BE   0   0    10.5
 F    0   0    0
 #Taxon F is equidistant from cluster ACD and BE so it will be a new cluster. Cluster ACD and BE will be closer to each other than cluster F because distance between them is less than cluster F.
+
+#Maximum Likelihood Method:
+It uses probabilistic models to choose the best tree that has the highest probability. 
+Kimura 2 parameter model (K2P):
+Most widely used model in molecular evolution to calculate nucleotide substitution rates in DNA sequences. This model used to estimate the evolutionary distance between two sequences by considering different rates of transition and transversion mutations.
+Transition refers to a substitution between purines  or pyrimidines and transversion refers to a substitution between a purine and a pyrimidine.
+In real sequences, transitions are more frequent than transversions. This model assigns different rates to these two types of subsitutions.  
+We can calculate K2P distance between two sequences using below formula:
+d = (-1/2)log((1-2P-Q)1-2Q)
+d = evolutionary distance between two sequences
+P = proportions of transitions between two sequences
+Q = proportions of transversions between two sequences
+
+Jukes Cantor model:
+Simplest model of DNA sequence evolution and assumes that there is no difference between rates of transition and transversion between two sequences.
+We can calculate JC distance between two sequences using below formula:
+d = (-3/4)log((1-(4/3))P)
+d = evolutionary distance (expected number of substitutions per site)
+P = proportion of nucleotide differences between two sequences 
 
 # Link to install MEGA (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe)
