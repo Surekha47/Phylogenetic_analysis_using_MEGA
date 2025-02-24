@@ -144,7 +144,7 @@ BE   0   0    10.5
 F    0   0    0
 #Taxon F is equidistant from cluster ACD and BE so it will be a new cluster. Cluster ACD and BE will be closer to each other than cluster F because distance between them is less than cluster F.
 
-#Maximum Likelihood Method:
+# Maximum Likelihood Method:
 It uses probabilistic models to choose the best tree that has the highest probability. 
 Kimura 2 parameter model (K2P):
 Most widely used model in molecular evolution to calculate nucleotide substitution rates in DNA sequences. This model used to estimate the evolutionary distance between two sequences by considering different rates of transition and transversion mutations.
