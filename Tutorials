@@ -1,16 +1,16 @@
-#Step 1: Load the file
+# Step 1: Load the file
 Open the MEGA software.
 Click on Align > Edit/Build Alignment.
 In the Alignment Explorer, click Create a New Alignment and choose DNA.
 Click File > Open and load your FASTA file.
 
-#Step 2: Perform Multiple Sequence Alignment
+# Step 2: Perform Multiple Sequence Alignment
 In the Alignment Explorer, click Alignment > Align by ClustalW or Align by Muscle.
 Save the aligned file:
 Click Data > Export Alignment > MEGA Format (.meg).
 Save as aligned_sequences.meg.
 
-#Step 3: Construct the phylogenetic tree
+# Step 3: Construct the phylogenetic tree
 In MEGA’s main window, go to Phylogeny > Construct/Test Phylogeny.
 Open the aligned_sequences.meg file.
 Choose a tree-building method:
@@ -22,15 +22,15 @@ Select Bootstrap value (100)
 
 Click Compute to generate the tree.
 
-#Step 4: Visualize and Save the phylogenetic tree.
+# Step 4: Visualize and Save the phylogenetic tree.
 The tree will be displayed with branch lengths and bootstrap values.
 Customize:
 Labels: Click View > Options > Font & Label Settings.
 Branch Styles: Change color, width, etc.
 
-#Step 5: Save the tree:
+# Step 5: Save the tree:
 File > Export as Image (PNG, SVG, PDF)
 
-#Step 6: Interpret the phylogenetic tree
+# Step 6: Interpret the phylogenetic tree
 Closer branches = More related species.
 Bootstrap values (>70) indicate strong similarity.
