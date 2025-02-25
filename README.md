@@ -21,19 +21,19 @@ C  0   0   0   14
 D  0   0   0   0
 
 #Round 1 
-#Step 1: Compute r'i for each terminal node using the below formula (i = A/B/C/D).
+#Step 1: Compute r'i for each terminal node using the below formula (i = A/B/C/D) (r'i = total distance of taxon i to all other taxa in the matrix).
 
 r'i = Summation(Di,j)/(n-2)      # n = number of taxa, i and j are two taxa.
 r'A = D(A,B)+D(A,C)+D(A,D)/(4-2) = 17+21+27 = 32.5
-Similary compute r'i for each node.
+Similarly compute r'i for each node.
 d  A   B   C   D   r'
 A  0   17  21  27  32.5
 B  0   0   12  18  23.5
 C  0   0   0   14  23.5
 D  0   0   0   0   29.5
 
-#Step 2: Compute d'i,j for each terminal node using the below formula.
-d'ij = dij-r'i-r'j
+#Step 2: Compute d'ij for each terminal node using the below formula (d'ij = neighbor joining criterion).
+d'ij = dij-r'i-r'j (dij = observed pairwise distance)
 d'AB = dAB-r'A-r'B = 17-32.5-23.5 = -39
 Similarly compute d'ij for each node.
 d'   A   B   C   D
@@ -45,7 +45,7 @@ D    0   0   0    0
 #Select minimum d' (For e.g. minimum distance is -39 between A&B and C&D, we can select and join any of these two taxa).
 First we consider joining of taxa C and D to a node u.
 
-#Step 3: Calculate branch lengths.
+#Step 3: Calculate branch lengths using below formula.
 Vi = 0.5(dij)+0.5(r'i-r'j)
 Vj = 0.5(dji)+0.5(r'j-r'i)
 
@@ -115,16 +115,16 @@ In this example, A and C, B and E are the closest because number of mismatches a
 
 Step 3: Merge A and C  into a new cluster and calculate distances between remaining taxa and the new cluster using the below formula.
 
-d(AC,X) = d(A,X)+d(C,X)/2
+d(AC,X) = (d(A,X)+d(C,X))/2
 For example, calculate distance between AC and B.
-d(AC,B) = d(A,B)+d(C,B)/2 = 9+9/2 = 9
+d(AC,B) = (d(A,B)+d(C,B))/2 = 9+9/2 = 9
 
-      AC   B   D   E   F
-AC   0     9   4.5   9   11
-B     0     0   6   2   11
-D     0     0   0   6   10
-E     0     0   0   0   10
-F     0     0   0   0   0
+    AC   B   D   E   F
+AC   0   9   4.5 9  11
+B    0   0   6   2  11
+D    0   0   0   6  10
+E    0   0   0   0  10
+F    0   0   0   0  0
 
 Step 4: Merge B and E into a new cluster and calculate distance between remaining taxa and this cluster using the above formula.
 
@@ -156,11 +156,11 @@ d = evolutionary distance between two sequences
 P = proportions of transitions between two sequences
 Q = proportions of transversions between two sequences
 
-Jukes Cantor model:
+Jukes Cantor model (JC):
 Simplest model of DNA sequence evolution and assumes that there is no difference between rates of transition and transversion between two sequences.
 We can calculate JC distance between two sequences using below formula:
 d = (-3/4)log((1-(4/3))P)
 d = evolutionary distance (expected number of substitutions per site)
 P = proportion of nucleotide differences between two sequences 
 
-# Link to install MEGA (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe)
+# To construct the phylogenetic tree in MEGA software we will install the MEGA software using this link (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe).
