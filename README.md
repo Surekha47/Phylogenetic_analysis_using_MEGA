@@ -89,7 +89,7 @@ Length of branches Av and Bv are 13 and 4 respectively.
 d   AB   CD
 AB  0     4
 CD  0     0
-
+#Step 2: Join the cluster AB and CD and distance between them is 4.
 
 # UPGMA Method
 It assumes constant rate of evolution (molecular clock) means all species in the tree have evolved for the same duration from their common ancestor.
