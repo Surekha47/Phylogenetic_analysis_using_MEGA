@@ -163,4 +163,4 @@ d = (-3/4)log((1-(4/3))P)
 d = evolutionary distance (expected number of substitutions per site)
 P = proportion of nucleotide differences between two sequences 
 
-# To construct the phylogenetic tree in MEGA software we will install the MEGA software using this link (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe).
+# To construct the phylogenetic tree in MEGA software we will install this software using the below link (https://www.megasoftware.net/releases/MEGA_12.0.8_win64_setup.exe).
